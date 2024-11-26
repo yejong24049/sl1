@@ -6,30 +6,30 @@
     <title>소련재건사전조사</title>
     <style>
         body {
-            background-color: red; /* 배경을 빨간색으로 설정 */
-            color: black; /* 텍스트 색을 검정색으로 설정 */
-            font-family: Arial, sans-serif; /* 글꼴 설정 */
+            background-color: red; 
+            color: black; 
+            font-family: Arial, sans-serif; 
             display: flex;
-            flex-direction: column; /* 세로로 정렬 */
-            justify-content: center; /* 화면 중앙 정렬 */
-            align-items: center; /* 화면 중앙 정렬 */
-            height: 100vh; /* 화면 전체 높이 사용 */
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
             margin: 0;
         }
         h1 {
-            font-size: 2em; /* 텍스트 크기 설정 */
+            font-size: 2em; 
             text-align: center;
-            margin: 0; /* 여백 없애기 */
+            margin: 0; 
         }
         p {
-            font-size: 1.2em; /* 텍스트 크기를 약간 작게 설정 */
-            text-align: center; /* 가운데 정렬 */
-            margin-top: 10px; /* 위쪽에 약간의 여백 추가 */
+            font-size: 1.2em; 
+            text-align: center; 
+            margin-top: 10px; 
             display: flex;
-            align-items: center; /* 버튼과 텍스트를 수평 정렬 */
+            align-items: center; 
         }
         .counter {
-            font-size: 1.5em; /* 카운터 텍스트 크기 설정 */
+            font-size: 1.5em; 
             margin-top: 20px;
         }
         .button-container {
@@ -42,14 +42,14 @@
             color: rgb(255, 255, 255);
         }
         #copyButton {
-            margin-left: 10px; /* 텍스트와 버튼 사이의 간격 */
+            margin-left: 10px; 
         }
-        /* 텍스트 크기를 줄여주는 스타일 */
+        
         .small-text {
-            font-size: 0.7em; /* 텍스트 크기 줄이기 */
-            text-align: center; /* 가운데 정렬 */
-            color: black; /* 텍스트 색상 설정 */
-            margin-top: 10px; /* 위쪽에 간격 추가 */
+            font-size: 0.7em; 
+            text-align: center; 
+            color: black; 
+            margin-top: 10px; 
         }
     </style>
 </head>
@@ -69,14 +69,11 @@
         행운이 올 확률  <span id="count">0</span> %
     </div>
     
-    <!-- Copy Message -->
-    <div id="copyMessage" class="copy-message"></div>
-
-    <!-- 추가된 텍스트 -->
+    <div id="copyMessage" 
     <p class="small-text">본 확률은 0%에서 이상, 또는 이하로 넘어가는 시점부터 무효화됩니다.</p>
 
     <script>
-        // 카운트 기능
+        // 카운트임 이거
         let count = 0;
         const okButton = document.getElementById('okButton');
         const checkbox = document.getElementById('checkbox');
@@ -89,18 +86,18 @@
             }
         });
 
-        // 카피 버튼 및 클립보드 복사
+        
         const copyButton = document.getElementById('copyButton');
         const copyMessage = document.getElementById('copyMessage');
         const textToCopy = '소련을 그리워하지 않는자는 심장이 없다. 허나 소련을 재건 하고싶은 사람은 뇌가 없다.';
 
         copyButton.addEventListener('click', () => {
-            // 텍스트를 클립보드에 복사
+            // 복사하는거임
             navigator.clipboard.writeText(textToCopy).then(() => {
-                // 복사 성공 메시지 표시
-                copyMessage.textContent = '*클립보드에 복사됨*';
                 
-                // 1초 후 원래 텍스트로 되돌리기
+                copyMessage.textContent = 
+                
+                
                 setTimeout(() => {
                     copyMessage.textContent = '';
                 }, 1000);
